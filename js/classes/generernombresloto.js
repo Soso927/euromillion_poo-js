@@ -19,10 +19,7 @@ class Loto {
     }
     // la méthode (bind) crée une nouvelle fonction qui lorsqu'elle est appelée, a pour contexte this la valeur passé en paramètre et éventuellement une suite d'arguments qui précéderont ceux fournis à l'appel de la fonction créé
     get numeroAll() {
-        return {
-            genererNumeroStandard: this.#genererNumeroStandard.bind(this)
-            ,genererNumeroEtoiles: this.#genererNumeroEtoiles.bind(this)
-        }
+        return this.numeroStandard.concat(this.numeroEtoiles);
     }
 
 
